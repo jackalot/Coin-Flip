@@ -1,7 +1,11 @@
 import javax.swing.JOptionPane;
 public class Start {
-	public static String UpdateMessage(int heads, int tails) {
-		String newMessage;
+	public static String UpdateMessage(int heads, int tails, String LastCoin) {
+		String newMessage = "You flipped " + LastCoin + ",\n"
+				+ "heres the heads and tails count,\n"
+				+ "heads: " + heads + ",\n"
+				+ "tails: " + tails + ",\n"
+				+ "Would you like to flip again?";
 		return newMessage;
 	}
 	public static int flip()
@@ -23,19 +27,22 @@ public class Start {
 		String totalMessage = "Heres the heads and tails count,\n"
 				+ "heads: " + heads + ",\n"
 				+ "tails: " + tails + ",\n"
-				+ "Would you like to flip again?"; 
+				+ "Would you like to flip a coin?"; 
 		int reply = -1;
+		String LastCoin = "";
 		do {
 			int result = flip();
 			if(result > 50)
 			{
 				heads++;
+				LastCoin = "Heads";
 			}
 			else
 			{
 				tails++;
+				LastCoin = "Tails";
 			}
-			totalMessage = updateMessage(heads, tails);
+			totalMessage = UpdateMessage(heads, tails, LastCoin);
 			reply = playAgain(totalMessage);
 		} while(reply == JOptionPane.YES_OPTION);
 	}
