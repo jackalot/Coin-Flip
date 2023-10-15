@@ -1,5 +1,10 @@
 import javax.swing.JOptionPane;
 public class Start {
+	public static int flip()
+	{
+		int randomResult = (int) Math.random();
+		return randomResult;
+	}
 	public static int playAgain(String totalMessage)
 	{
 		int reply = JOptionPane.showConfirmDialog(null, totalMessage, "test", JOptionPane.YES_NO_OPTION);
