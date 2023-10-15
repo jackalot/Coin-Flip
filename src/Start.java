@@ -6,11 +6,12 @@ public class Start {
 		int tails = 0;
 		String totalMessage = "Heres the heads and tails count,\n"
 				+ "heads: " + heads + ",\n"
-				+ "tails: " + tails; 
+				+ "tails: " + tails + ",\n"
+				+ "Would you like to flip again?"; 
 		while(keepGoing)
 		{
 			keepGoing = false;
 		}
-		JOptionPane.showMessageDialog(null, totalMessage);
+		int reply = JOptionPane.showConfirmDialog(null, totalMessage, "test", JOptionPane.YES_NO_OPTION);
 	}
 }
