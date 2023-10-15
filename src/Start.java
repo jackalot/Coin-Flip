@@ -49,5 +49,6 @@ public class Start {
 			reply = playAgain(totalMessage);
 			
 		} while(reply == JOptionPane.YES_OPTION);
+		System.exit(0);
 	}
 }
