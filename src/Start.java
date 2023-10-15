@@ -1,5 +1,9 @@
 import javax.swing.JOptionPane;
 public class Start {
+	public static String UpdateMessage(int heads, int tails) {
+		String newMessage;
+		return newMessage;
+	}
 	public static int flip()
 	{
 		int max = 100;
@@ -31,6 +35,7 @@ public class Start {
 			{
 				tails++;
 			}
+			totalMessage = updateMessage(heads, tails);
 			reply = playAgain(totalMessage);
 		} while(reply == JOptionPane.YES_OPTION);
 	}
