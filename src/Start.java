@@ -2,7 +2,10 @@ import javax.swing.JOptionPane;
 public class Start {
 	public static int flip()
 	{
-		int randomResult = (int) Math.random();
+		int max = 100;
+		int min = 1;
+		int range = (max - min) + 1;
+		int randomResult = (int) (Math.random() * range) + min;
 		return randomResult;
 	}
 	public static int playAgain(String totalMessage)
@@ -19,8 +22,8 @@ public class Start {
 				+ "Would you like to flip again?"; 
 		int reply = -1;
 		do {
+			int result = flip();
 			reply = playAgain(totalMessage);
-			System.out.print(reply);
 		} while(reply == JOptionPane.YES_OPTION);
 	}
 }
