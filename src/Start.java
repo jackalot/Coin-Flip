@@ -3,7 +3,7 @@ public class Start {
 	public static int flip()
 	{
 		int max = 100;
-		int min = 1;
+		int min = 0;
 		int range = (max - min) + 1;
 		int randomResult = (int) (Math.random() * range) + min;
 		return randomResult;
@@ -23,6 +23,14 @@ public class Start {
 		int reply = -1;
 		do {
 			int result = flip();
+			if(result > 50)
+			{
+				heads++;
+			}
+			else
+			{
+				tails++;
+			}
 			reply = playAgain(totalMessage);
 		} while(reply == JOptionPane.YES_OPTION);
 	}
